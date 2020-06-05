@@ -69,7 +69,7 @@
 #### 排序sort
 - db.collection_name.find().sort({key:1})   (1为升序排列，而-1是用于降序排列)
 
-## 创建索引
+#### 创建索引
 - db.collection_name.createIndex(keys, options)
 - db.collection_name.createIndex({"title":1,"name":-1},background: true)  (1为升序创建索引，-1为降序创建索引)
 
