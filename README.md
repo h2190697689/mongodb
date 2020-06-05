@@ -50,6 +50,7 @@
 - db.collection_name.find({"id":1,"name":"hejiamin"})
 - db.collection_name.find({"likes":{$lt:50}})   ($lt: 小于;   $lte: 小于等于;  $gt: 大于,  $gte:大于等于, $ne:不等于)
 - db.collection_name.find({$or:[{"id":1},{"id":2}]})   (或者选择)
+- db.collection_name.findOne({name:"min"})  (v3.2)
 
 ## 条件操作符
 - $gt  $gte  $lt  $lte
@@ -82,7 +83,9 @@
 ## 数据备份
 ### 导入单文件
 - mongoimport --db db_name --collection collection_name --drop --file file.json  (--drop把集合清空)
+
 ### 导出整个数据库
 - mongodump -h dbhost -d dbname -o dbdirectory
+
 ### 导入整个数据库
 - mongorestore -h <hostname><:port> -d dbname <path>
